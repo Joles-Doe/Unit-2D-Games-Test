@@ -457,6 +457,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vel: 6
+  angle: 0
+  angle_speed: 5
   gameManager: {fileID: 2070836568}
 --- !u!70 &292637312
 CapsuleCollider2D:

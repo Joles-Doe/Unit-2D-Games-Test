@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
 
-    public float maxtime = 1;
+    public float maxtime = 2;
     private float timer = 0;
     public float despawn_time = 15;
     public GameObject obstacle;
