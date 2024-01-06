@@ -7,5 +7,6 @@ public class Addscore : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Score_tracker.score++;
+        PlayerStats.colour_counter++;
     }
 }

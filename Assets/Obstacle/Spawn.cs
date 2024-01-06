@@ -15,6 +15,8 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        obstacle.GetComponentInChildren<Renderer>().sharedMaterial.color = new Color((float)PlayerStats.colour_RGB[0] / 255, (float)PlayerStats.colour_RGB[1] / 255, (float)PlayerStats.colour_RGB[2] / 255);
+
         GameObject new_obstacle = Instantiate(obstacle);
         new_obstacle.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
         Destroy(new_obstacle, despawn_time);
@@ -26,6 +28,7 @@ public class Spawn : MonoBehaviour
         if (timer > maxtime)
         {
             timer = 0;
+            obstacle.GetComponentInChildren<Renderer>().sharedMaterial.color = new Color((float)PlayerStats.colour_RGB[0] / 255, (float)PlayerStats.colour_RGB[1] / 255, (float)PlayerStats.colour_RGB[2] / 255);
 
             GameObject new_obstacle = Instantiate(obstacle);
             new_obstacle.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
